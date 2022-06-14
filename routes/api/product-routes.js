@@ -93,11 +93,14 @@ router.put('/:id', async (req, res) => {
     where: {
         id: req.params.id,
     }})
-    if(newProductData.product_id){
+    const productTags = await ProductTag.findAll({ where: { product_id: req.params.id } });
+      console.log(productTags);
+    if(productTags){
+      console.log("have tag");
       // find all associated tags from ProductTag
-      const productTags =ProductTag.findAll({ where: { product_id: product.id } });
       // get list of current tag_ids
-      const productTagIds = productTags.map(({ tag_id }) => tag_id);
+      const productTagIds = await productTags.map(({ tag_id }) => tag_id);
+      console.log("productTagIds",productTagIds);
       // create filtered list of new tag_ids
       const newProductTags = req.body.tagIds
         .filter((tag_id) => !productTagIds.includes(tag_id))
@@ -121,6 +124,7 @@ router.put('/:id', async (req, res) => {
       res.status(200).json(finallupdateData);
 
     }else{
+      console.log("Noooo have tag");
       res.status(200).json(newProductData);
     }
   }catch(rtt){
@@ -128,14 +132,16 @@ router.put('/:id', async (req, res) => {
 
   }
   //start code original
-  // return Product.update(req.body, {
+  //return Product.update(req.body, {
+  // Product.update(req.body, {
   //   where: {
   //     id: req.params.id,
   //   },
   // })
   //   .then((product) => {
   //     // find all associated tags from ProductTag
-  //     return ProductTag.findAll({ where: { product_id: product.id } });
+  //     // return ProductTag.findAll({ where: { product_id: product.id } });
+  //     return ProductTag.findAll({ where: { product_id: req.params.id } });
   //   })
   //   .then((productTags) => {
   //     // get list of current tag_ids
