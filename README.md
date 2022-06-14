@@ -71,6 +71,10 @@ AS A manager at an internet retail company, I want a back end for my e-commerce 
 - [Pei-Yun Hite's Github Link](https://github.com/ollyhite)
 - Send Qquestions or suggestions for changes to the readme_generator_tool project maintainer, [Pei-Yun Hite](mailto:ollyhite8520@gmail.com?subject=[GitHub]%20employee_organizer%20) , for consideration.
 
+## Credits
+
+https://github.com/coding-boot-camp/fantastic-umbrella
+
 ## License
 
 MIT License
