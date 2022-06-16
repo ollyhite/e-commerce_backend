@@ -50,9 +50,14 @@ AS A manager at an internet retail company, I want a back end for my e-commerce 
 ## Usage
 
 - How to setup E-commerce_backend \
-  ![set_up_video](./dist/images/set_up_EmployeeOrganizer_demoe.gif) \
+  ![set_up_video](./dist/images/ecommerce_setup.gif) \
+
+  https://drive.google.com/file/d/1ZKdIF5clh8TIdMCJXQrLsYaXuL4HEBqU/view
+
 - How to use E-commerce_backend \
-  ![walkthrough_video](./dist/images/employee_organizer_demo_video.gif) \
+  ![walkthrough_video](./dist/images/ecommerce_demo.gif) \
+
+  https://drive.google.com/file/d/1cl7_tmN5ksCXcU_ZOAshjmk5UB1HlmkS/view
 
 ## Built With
 
